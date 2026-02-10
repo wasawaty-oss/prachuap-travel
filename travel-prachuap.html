@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<title>เที่ยวประจวบคีรีขันธ์</title>
+
+<style>
+body {
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  background: #eaf6ff;
+  margin: 0;
+}
+
+.app {
+  max-width: 420px;
+  margin: auto;
+  background: white;
+  min-height: 100vh;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  color: #0077b6;
+}
+
+.subtitle {
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.menu button {
+  width: 100%;
+  padding: 14px;
+  margin: 8px 0;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  background: #00b4d8;
+  color: white;
+  cursor: pointer;
+}
+
+.menu button:hover {
+  background: #0096c7;
+}
+
+.content {
+  margin-top: 20px;
+  padding: 15px;
+  background: #f1f9ff;
+  border-radius: 10px;
+  text-align: left;
+}
+
+.footer {
+  margin-top: 40px;
+  font-size: 13px;
+  color: #777;
+}
+</style>
+
+</head>
+<body>
+
+<div class="app">
+  <h1>เที่ยวประจวบคีรีขันธ์</h1>
+  <p class="subtitle" id="subtitle">เมืองสงบ ทะเลสวย วัฒนธรรมงาม</p>
+
+  <div class="menu">
+    <button onclick="showPlace()">🏖️ สถานที่ท่องเที่ยว</button>
+    <button onclick="showEvent()">📅 กิจกรรม</button>
+    <button onclick="showMap()">📍 แผนที่</button>
+    <button onclick="showContact()">☎️ ติดต่อเทศบาล</button>
+  </div>
+
+  <div class="content" id="content">
+    <p>เลือกเมนูด้านบนเพื่อดูข้อมูล</p>
+  </div>
+
+  <p class="footer">เทศบาลเมืองประจวบคีรีขันธ์</p>
+</div>
+
+<script>
+function showPlace() {
+  subtitle.innerText = "แหล่งท่องเที่ยวยอดนิยม";
+  content.innerHTML = `
+    <ul>
+      <li>อ่าวประจวบ</li>
+      <li>เขาช่องกระจก</li>
+      <li>หาดนวกร</li>
+    </ul>`;
+}
+
+function showEvent() {
+  subtitle.innerText = "กิจกรรมและเทศกาล";
+  content.innerHTML = `
+    <p>📅 งานวาเลนไทน์ริมทะเล</p>
+    <p>🎶 ถนนคนเดินเย็นวันศุกร์-เสาร์</p>`;
+}
+
+function showMap() {
+  subtitle.innerText = "แผนที่สถานที่ท่องเที่ยว";
+  content.innerHTML = `<p>📍 (ขั้นต่อไปจะเชื่อม Google Map จริง)</p>`;
+}
+
+function showContact() {
+  subtitle.innerText = "ติดต่อเทศบาล";
+  content.innerHTML = `
+    <p>☎️ โทร: 0xx-xxx-xxxx</p>
+    <p>📍 เทศบาลเมืองประจวบคีรีขันธ์</p>`;
+}
+</script>
+
+</body>
+</html>
